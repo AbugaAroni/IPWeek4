@@ -1,7 +1,7 @@
 // Business interface logic
 
 //price of pizza
-var totalPrice = 0;
+var totalcost = 0;
 
 //delvery information
 var deliveryinfo = "A delivery cost of 200ksh has been added";
@@ -67,7 +67,7 @@ Pizza.prototype.pizzaCost = function () {
 }
 
 Pizza.prototype.finalCost = function () {
-  totalPrice += this.totalprice;
+  totalcost += this.totalprice;
 }
 
 //user interface logic
@@ -81,7 +81,7 @@ $("#delivery").click( function(event) {
   $("button#delivery").addClass('show-div');
 
   //add delivery cost 200ksh
-  totalPrice += 200;
+  totalcost += 200;
   $("p#delivery-cost").append("<span class=' '>" + deliveryinfo + "</span>");
 
 });
@@ -95,7 +95,7 @@ $("#pickup").click( function(event) {
  $("button#pickup").addClass('show-div');
 
  //add in-store pick cost 0
- totalPrice += 0;
+ totalcost += 0;
 
  $("p#delivery-cost").append("<span class=' '>" + nodeliveryinfo + "</span>");
 });
@@ -125,11 +125,14 @@ $("form#pizza-form").submit(function(event) {
     newPizza = new Pizza(inputtedPSize, inputtedPCrust, inputtedPCheese, inputtedPType);
     newCPizza = new CustomP(inputtedPCustomB, inputtedPCustomV, inputtedPCustomM);
 
-    var pizzaDetails = (inputtedPSize + " - " + inputtedPCrust + ", " + inputtedPCheese + ", " + inputtedPType + ". ");
+    var pizzaDetails = (inputtedPSize + " - " + inputtedPCrust + ", " + inputtedPCheese + ", " + inputtedPCheese + ", " + inputtedPType + ". ");
     newPizza.pizzaCost();
-    newPizza.finalCost();
+   var cost =  newPizza.finalCost();
 
     console.log(pizzaDetails);
+    console.log(cost);
+    console.log(newPizza.totalprice);
+    console.log(totalcost);
 /*
     $("#pizza-details-dropdown").show();
     $("#final-cost").text(newPizzaOrder.finalCost());
