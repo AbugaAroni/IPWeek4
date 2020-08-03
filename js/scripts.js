@@ -130,4 +130,10 @@ $("form#pizza-form").submit(function(event) {
 
   });
 
+  //Complete order button reloads page
+    $("#complete-order").click(function() {
+      location.reload();
+    });
+
+
   });
