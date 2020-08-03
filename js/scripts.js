@@ -19,38 +19,38 @@ function Pizza (size,crust,cheese,type) {
 
 //price
 Pizza.prototype.pizzaCost = function () {
-  if (this.size === "Small") {
+  if (this.size === "Small / 500ksh") {
     this.totalprice += 500;
-  } else if (this.size === "Medium") {
+  } else if (this.size === "Medium / 750ksh") {
     this.totalprice += 750;
-  } else if (this.size === "Large") {
+  } else if (this.size === "Large / 900ksh") {
     this.totalprice += 900;
   }
-  else if (this.size === "Extra-Large") {
+  else if (this.size === "Extra-Large / 1200ksh") {
     this.totalprice += 1200;
   }
 
-  if (this.crust === "Crispy") {
+  if (this.crust === "Crispy / 50ksh") {
     this.totalprice += 50;
-  } else if (this.crust === "Stuffed") {
+  } else if (this.crust === "Stuffed / 100ksh") {
     this.totalprice += 100;
-  } else if (this.crust === "Glutten-free") {
+  } else if (this.crust === "Glutten-Free / 150ksh") {
     this.totalprice += 150;
   }
 
-  if (this.cheese === "Normal") {
+  if (this.cheese === "Normal / 50ksh") {
     this.totalprice += 50;
-  } else if (this.cheese === "Extra-cheesy") {
+  } else if (this.cheese === "Extra-cheesy / 100ksh") {
     this.totalprice += 100;
-  } else if (this.cheese === "Vegan-cheese") {
+  } else if (this.cheese === "Vegan-cheese / 200ksh") {
     this.totalprice += 200;
   }
 
-  if (this.type === "Margherita") {
+  if (this.type === "Margherita / 0ksh") {
     this.totalprice += 0;
-  } else if (this.type === "Pepperoni") {
+  } else if (this.type === "Pepperoni / 100ksh") {
     this.totalprice += 100;
-  } else if (this.type === "Hawaiian") {
+  } else if (this.type === "Hawaiian / 100ksh") {
     this.totalprice += 100;
   }
   else if (this.type === "Custom") {
