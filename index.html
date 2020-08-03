@@ -23,7 +23,7 @@
           <button id="delivery" class="btn btn-primary"> Delivery </button>
           <button id="pickup" class="btn btn-primary"> In-store Pickup </button>
         </div>
-        <div class="col-md show-div">
+        <div id = "addressbox" class="col-md show-div">
           <h3>Add your address information</h3>
           <p> *Delivery only available in Nairobi Area </p>
           <form id="address-form">
@@ -35,10 +35,6 @@
                        <label for="last-name">Last Name</label><input required type="text" class="form-control address-spacing">
                      </div>
                    </div>
-                   <div class="row">
-                     <div class="col-xs-6">
-                       <label for="street-address">Address</label><input required type="text" class="form-control" id="street-add">
-                     </div>
                      <div class="col-xs-1">
                        <label for="area-name">Area</label>
                        <select required class="form-control delivery-address" id="state-select">
@@ -49,6 +45,10 @@
                          <option>Lavington</option>
                        </select>
                      </div>
+                     <div class="row">
+                       <div class="col-xs-6">
+                         <label for="street-address">Street Address</label><input required type="text" class="form-control" id="street-add">
+                       </div>
                      <div class="col-xs-2">
                        <label for="phone number">Phone Number</label><input required type="text" class="form-control" id="phone-add">
                      </div>
