@@ -1,5 +1,6 @@
 div {
   object-fit: contain;
+  padding: 10px;
 }
 
 img {
@@ -12,5 +13,6 @@ img {
 }
 
 .addressbackground {
-  background-color: blue;
+  background-color: lightblue;
+
 }

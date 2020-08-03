@@ -31,5 +31,4 @@ $("form#address-form").submit(function(event) {
   $("p#del-message").removeClass('show-div');
 });
 
-
 });
