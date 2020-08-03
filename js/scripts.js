@@ -101,7 +101,7 @@ $("#pickup").click( function(event) {
 });
 
 //when address info is submitted, this prompt appears. Address box will be hidden and the order box will appear
-$("form#address-form").submit(function(event) {
+$("#address-btn").click(function(event) {
  event.preventDefault();
  alert("Your order will be delivered to your location! Make your order now");
   $("#order").removeClass('show-div');
@@ -122,13 +122,15 @@ $("form#pizza-form").submit(function(event) {
  var inputtedPCustomV = $("select#pizza-veggies").val();
  var inputtedPCustomM = $("select#pizza-meat").val();
 
- newPizza = new Pizza(inputtedPSize, inputtedPCrust, inputtedPCheese, inputtedPType);
- newPizza = new Customp(inputtedPCustomB, inputtedPCustomV, inputtedPCustomM);
+    newPizza = new Pizza(inputtedPSize, inputtedPCrust, inputtedPCheese, inputtedPType);
+    newCPizza = new CustomP(inputtedPCustomB, inputtedPCustomV, inputtedPCustomM);
 
-    var pizzaDetails = (inputtedPSize + " - " + inputtedPCrust + ", " + inputtedPCheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
-    var newPizzaOrder = new Order(customSize, cheese);
-    newPizzaOrder.pizzaCost();
-    totalPriceArray.push(newPizzaOrder.pizzaPrice);
+    var pizzaDetails = (inputtedPSize + " - " + inputtedPCrust + ", " + inputtedPCheese + ", " + inputtedPType + ". ");
+    newPizza.pizzaCost();
+    newPizza.finalCost();
+
+    console.log(pizzaDetails);
+/*
     $("#pizza-details-dropdown").show();
     $("#final-cost").text(newPizzaOrder.finalCost());
     $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
@@ -144,6 +146,8 @@ $("form#pizza-form").submit(function(event) {
  //hides submit button so users can't add another balance
    $("button#adduser").removeClass('btn btn-primary');
    $("button#adduser").addClass('show-contact');
+
+   */
 
 });
 

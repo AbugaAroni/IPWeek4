@@ -55,8 +55,8 @@
                        <label for="phone number">Phone Number</label><input required type="text" class="form-control" id="phone-add">
                      </div>
                    </div>
-                   <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>
                  </form>
+                 <button class="btn btn-primary" id="address-btn">Submit</button>
         </div>
       </div>
       <div id="order" class ="show-div">
@@ -99,29 +99,28 @@
                 </div>
                 <div class ="col-md"><h3>Custom toppings</h3>
                   <label for="Pizza Base">Base</label>
-                  <select required class="form-control pizza-base" id="pizza-base">
-                    <option></option>
+                  <select  class="form-control pizza-base" id="pizza-base">
+                    <option>None</option>
                     <option>Tomato</option>
                     <option>Barbeqcue</option>
                   </select>
                   <label for="state-name">Veggies</label>
                   <select required class="form-control pizza-veggies" id="pizza-veggies">
-                    <option></option>
+                    <option>None</option>
                     <option>Onions</option>
                     <option>Green Peppers</option>
                     <option>Sun-dried Tomatos</option>
                   </select>
                   <label for="state-name">Meat</label>
                   <select required class="form-control pizza-meat" id="pizza-meat">
-                    <option></option>
+                    <option>None</option>
                     <option>Beef strips</option>
                     <option>Chicken</option>
                     <option>Pork</option>
-                    <option>None</option>
                   </select>
                 </div>
               <div class ="col-md"><h3>Submit order</h3>
-                <button type="submit" id="pizzasubmit" class="btn btn-primary" > Submit Details</button>
+                <button type="submit" id="pizzasubmit" class="btn btn-primary">Submit Details</button>
                 <input class="btn btn-primary" type="reset">
               </div>
               </form>
