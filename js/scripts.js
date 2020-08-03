@@ -128,10 +128,10 @@ $("form#pizza-form").submit(function(event) {
 
     numberOrders += 1;
 
-    $("p#pizza-details").append("Order " + numberOrders +"<ul><li>" + inputtedPSize + "</li><li>" + inputtedPCrust + "</li>"+ "</li><li>" + inputtedPCheese + "</li>"+ "</li><li>" + inputtedPType + "</li></ul>");
+    $("p#pizza-details").append("Order " + numberOrders +"<ul><li>" + inputtedPSize + "</li><li>" + inputtedPCrust + "</li>"+ "</li><li>" + inputtedPCheese + "</li>"+ "</li><li>" + inputtedPType + "</li>" + "Cost: " + newPizza.totalprice + " ksh"+"</ul>");
     $("p#total-cost").html("Total cost" + "<ul><li>" + totalcost + "ksh" +"</li></ul>");
     $("button#pizzasubmit").addClass('show-div');
-    $("button#anotherpizza").RemoveClass('show-div');
+    $("button#anotherpizza").removeClass('show-div');
 
   });
 
