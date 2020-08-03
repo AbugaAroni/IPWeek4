@@ -79,6 +79,8 @@ $("#delivery").click( function(event) {
 
 });
 
+
+
 //when inpick up button is clicked, the order pizza div should show and hide the add address form
 $("#pickup").click( function(event) {
  event.preventDefault();
@@ -122,27 +124,9 @@ $("form#pizza-form").submit(function(event) {
     console.log(cost);
     console.log(newPizza.totalprice);
     console.log(totalcost);
-/*
-    $("#pizza-details-dropdown").show();
-    $("#final-cost").text(newPizzaOrder.finalCost());
-    $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
-    $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
+
+    $("p#pizza-details").append("Order1" + "<ul><li>" + inputtedPSize + "</li><li>" + inputtedPCrust + "</li>"+ "</li><li>" + inputtedPCheese + "</li>"+ "</li><li>" + inputtedPType + "</li></ul>");
+    $
   });
-  $("#pizza-details-dropdown").click(function() {
-    $("#pizza-details").toggle();
 
-
- //code to show users info and current balance
-   $("p#userinfo").append("<span class='userdetailsname'>" + newUser.FullName + "</span>");
-   $("p#Cbalance").append("<span class='userdetailsbalance'>" + newUser.InitialBalance + ksh + "</span>");
- //hides submit button so users can't add another balance
-   $("button#adduser").removeClass('btn btn-primary');
-   $("button#adduser").addClass('show-contact');
-
-   */
-
-});
-
-
-
-});
+  });
