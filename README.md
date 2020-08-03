@@ -3,11 +3,11 @@
 ### Author: [Abuga Aroni] (https://github.com/AbugaAroni/)
 
 ### Description
-This is a web application for Da pizza ordering website.
+This is a web application for a pizza ordering website.
 
 ### Features
-
-
+You can order pizza.
+You can order as many different Pizzas as you would like.
 
 ### Setup Instructions
 If you wish to view the project, you can view the published site in the html link below. If you wish to view the code, you may download the files and open them in a text editor of your choosing.

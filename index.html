@@ -67,7 +67,7 @@
           <div class = "col-md">
             <div class="row">
               <form id="pizza-form">
-                <div class ="col-md"><h3>Size</h3>
+                <div class ="col-md"><h3 class="heading">Size</h3>
                     <select required class="form-control pizza-size" id="pizza-size">
                       <option>Small</option>
                       <option>Medium</option>
@@ -75,21 +75,21 @@
                       <option>Extra-Large</option>
                     </select>
                 </div>
-                <div class ="col-md"><h3>Crust</h3>
+                <div class ="col-md"><h3 class="heading">Crust</h3>
                   <select required class="form-control pizza-crust" id="pizza-crust">
                     <option>Crispy</option>
                     <option>Stuffed</option>
                     <option>Glutten-Free</option>
                   </select>
                 </div>
-                <div class ="col-md"><h3>Cheese</h3>
+                <div class ="col-md"><h3 class="heading">Cheese</h3>
                   <select required class="form-control pizza-cheese" id="pizza-cheese">
                     <option>Normal</option>
                     <option>Extra-cheesy</option>
                     <option>Vegan-cheese</option>
                   </select>
                 </div>
-                <div class ="col-md"><h3>Toppings/Type</h3>
+                <div class ="col-md"><h3 class="heading">Toppings/Type</h3>
                   <select required class="form-control pizza-type" id="pizza-type">
                     <option>Margherita</option>
                     <option>Pepperoni</option>
@@ -98,15 +98,15 @@
                 </div>
               <div class ="col-md"><h3>Submit order</h3>
                 <button type="submit" id="pizzasubmit" class="btn btn-primary">Submit Details</button>
-                <button type="submit" id="anotherpizza" class="btn btn-primary show-div">Add another pizza</button>
+                <button type="submit" id="anotherpizza" class="btn btn-success show-div">Add another pizza</button>
                 <input class="btn btn-primary" type="reset">
               </div>
               </form>
             </div>
           </div>
           <div class="col-md">
-            <h2>Cart</h2>
-              <h2>Price: $ <span id="final-cost"></span></h2>
+            <h2 class="heading">Cart</h2>
+              <h2> Order Details</h2>
               <div id="order-details">
               <p id="delivery-cost"> </p>
               <p id="pizza-details"> </p>
