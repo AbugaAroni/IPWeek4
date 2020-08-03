@@ -1,9 +1,14 @@
 // Business interface logic
 function Pizza (size,crust,cheese,toppings,custom) {
-  this.FullName = name;
-  this.InitialBalance = balance;
+  this.Size = size;
+  this.crust = 1;
+  this.cheese = cheese;
+  this.veggie1 = 1;
+  this.veggie2 = 1;
+  this.meat = 2;
+  this.pizzaPrice = 0;
+  this.sidePrice = 3;
 }
-
 
 
 //user interface logic

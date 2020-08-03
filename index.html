@@ -64,68 +64,70 @@
           <div class ="col"><h2>Please pick out your pizza</h2></div>
         </div>
         <div class = "row">
-          <form id="pizza-form">
-            <div class ="col-md"><h3>Size</h3>
-                <select required class="form-control pizza-size" id="pizza-size">
-                  <option>Small</option>
-                  <option>Medium</option>
-                  <option>Large</option>
-                  <option>Extra-Large</option>
-                </select>
+          <div class = "col-md">
+            <div class="row">
+              <form id="pizza-form">
+                <div class ="col-md"><h3>Size</h3>
+                    <select required class="form-control pizza-size" id="pizza-size">
+                      <option>Small</option>
+                      <option>Medium</option>
+                      <option>Large</option>
+                      <option>Extra-Large</option>
+                    </select>
+                </div>
+                <div class ="col-md"><h3>Crust</h3>
+                  <select required class="form-control pizza-crust" id="pizza-crust">
+                    <option>Crispy</option>
+                    <option>Stuffed</option>
+                    <option>Glutten-Free</option>
+                  </select>
+                </div>
+                <div class ="col-md"><h3>Cheese</h3>
+                  <select required class="form-control pizza-cheese" id="pizza-cheese">
+                    <option>Normal</option>
+                    <option>Extra-cheesy</option>
+                    <option>Vegan-cheese</option>
+                  </select>
+                </div>
+                <div class ="col-md"><h3>Toppings/Type</h3>
+                  <select required class="form-control pizza-type" id="pizza-type">
+                    <option>Margherita</option>
+                    <option>Pepperoni</option>
+                    <option>Hawaiian</option>
+                    <option>Mediterranian</option>
+                    <option>Custom</option>
+                  </select>
+                </div>
+                <div class ="col-md"><h3>Custom toppings</h3>
+                  <label for="Pizza Base">Base</label>
+                  <select required class="form-control pizza-base" id="pizza-base">
+                    <option></option>
+                    <option>Tomato</option>
+                    <option>Barbeqcue</option>
+                  </select>
+                  <label for="state-name">Veggies</label>
+                  <select required class="form-control pizza-veggies" id="pizza-veggies">
+                    <option>Onions</option>
+                    <option>Green Peppers</option>
+                    <option>Sun-dried Tomatos</option>
+                  </select>
+                  <label for="state-name">Meat</label>
+                  <select required class="form-control pizza-meat" id="pizza-meat">
+                    <option>Beef strips</option>
+                    <option>Chicken</option>
+                    <option>Pork</option>
+                    <option>None</option>
+                  </select>
+                </div>
+              <div class ="col-md"><h3>Submit order</h3>
+                <button type="submit" id="pizzasubmit" class="btn btn-primary" > Submit Details</button>
+                <input class="btn btn-primary" type="reset">
+              </div>
+              </form>
             </div>
-            <div class ="col-md"><h3>Crust</h3>
-              <select required class="form-control pizza-crust" id="pizza-crust">
-                <option>Crispy</option>
-                <option>Stuffed</option>
-                <option>Glutten-Free</option>
-              </select>
-            </div>
-            <div class ="col-md"><h3>Cheese</h3>
-              <select required class="form-control pizza-cheese" id="pizza-cheese">
-                <option>Normal</option>
-                <option>Extra-cheesy</option>
-                <option>Vegan-cheese</option>
-              </select>
-            </div>
-            <div class ="col-md"><h3>Toppings/Type</h3>
-              <select required class="form-control pizza-type" id="pizza-type">
-                <option>Margherita</option>
-                <option>Pepperoni</option>
-                <option>Hawaiian</option>
-                <option>Mediterranian</option>
-                <option>Custom</option>
-              </select>
-            </div>
-            <div class ="col-md"><h3>Custom toppings</h3>
-              <label for="Pizza Base">Base</label>
-              <select required class="form-control pizza-base" id="pizza-base">
-                <option></option>
-                <option>Tomato</option>
-                <option>Barbeqcue</option>
-              </select>
-              <label for="state-name">Veggies</label>
-              <select required class="form-control pizza-veggies" id="pizza-veggies">
-                <option>Onions</option>
-                <option>Green Peppers</option>
-                <option>Sun-dried Tomatos</option>
-              </select>
-              <label for="state-name">Meat</label>
-              <select required class="form-control pizza-meat" id="pizza-meat">
-                <option>Beef strips</option>
-                <option>Chicken</option>
-                <option>Pork</option>
-                <option>None</option>
-              </select>
-            </div>
-          <div class ="col-md"><h3>Submit order</h3>
-            <button type="submit" id="pizzasubmit" class="btn btn-primary" > Submit Details</button>
-            <input class="btn btn-primary" type="reset">
           </div>
-          </form>
-        </div>
-        <div class= "row">
           <div class="col-md">
-            <h1 class="page-header">Cart</h1>
+            <h2">Cart</h2>
               <h2>Price: $ <span id="final-cost"></span></h2>
               <div id="order-details">
 
@@ -133,7 +135,7 @@
             <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
             <h3><span id="delivery-option"></span></h3>
         </div>
-          </div>
+        </div>
       </div>
     </div>
   </body>
