@@ -1,18 +1,31 @@
 // Business interface logic
-function Pizza (size,crust,cheese,toppings,custom) {
-  this.Size = size;
-  this.crust = 1;
+
+//price of pizza
+var totalPrice = 0;
+
+//delvery information
+var deliveryinfo = "A delivery cost of 200 has been added";
+var nodeliveryinfo = "No delivery cost as instore pickup";
+
+
+function Pizza (size,crust,cheese,type) {
+  this.size = size;
+  this.crust = crust;
   this.cheese = cheese;
-  this.veggie1 = 1;
-  this.veggie2 = 1;
-  this.meat = 2;
-  this.pizzaPrice = 0;
-  this.sidePrice = 3;
+  this.type = type;
 }
 
 
-//user interface logic
+//collect info about custom order
+function CustomP (base,veggies,meat) {
+  this.base = base;
+  this.veggies = veggies;
+  this.meat= meat;
+}
 
+//price
+
+//user interface logic
 $(document).ready(function() {
 
  //when delivery button is clicked, the address collection div should show and hide instore pick up button
@@ -20,6 +33,11 @@ $("#delivery").click( function(event) {
   event.preventDefault();
   $("#addressbox").removeClass('show-div');
   $("button#pickup").addClass('show-div');
+
+  //add delivery cost 200ksh
+  totalPrice += 200;
+  $("p#delivery-cost").append("<span class=' '>" + deliveryinfo + "</span>");
+
 });
 
 //when inpick up button is clicked, the order pizza div should show and hide the add address form
@@ -29,6 +47,11 @@ $("#pickup").click( function(event) {
  $("button#delivery").addClass('show-div');
  $("p#pick-message").removeClass('show-div');
  $("button#pickup").addClass('show-div');
+
+ //add in-store pick cost 0
+ totalPrice += 0;
+
+ $("p#delivery-cost").append("<span class=' '>" + nodeliveryinfo + "</span>");
 });
 
 //when address info is submitted, this prompt appears. Address box will be hidden and the order box will appear
@@ -45,15 +68,16 @@ $("form#address-form").submit(function(event) {
 $("form#pizza-form").submit(function(event) {
  event.preventDefault();
 
- var inputtedPSize = $("input#new-name").val();
- var inputtedPCrust = $("input#new-name").val();
- var inputtedPCheese = $("input#new-name").val();
- var inputtedPType = $("input#new-name").val();
- var inputtedPCustomB = $("input#new-name").val();
- var inputtedPCustomV = $("input#new-name").val();
- var inputtedPCustomM = $("input#new-name").val();
+ var inputtedPSize = $("select#pizza-size").val();
+ var inputtedPCrust = $("select#pizza-crust").val();
+ var inputtedPCheese = $("select#pizza-cheese").val();
+ var inputtedPType = $("select#pizza-type").val();
+ var inputtedPCustomB = $("select#pizza-base").val();
+ var inputtedPCustomV = $("select#pizza-veggies").val();
+ var inputtedPCustomM = $("select#pizza-meat").val();
 
- newPizza = new Pizza(inputtedFullName, inputtedInitialBalance);
+ newPizza = new Pizza(inputtedPSize, inputtedPCrust, inputtedPCheese, inputtedPType);
+ newPizza = new Customp(inputtedPCustomB, inputtedPCustomV, inputtedPCustomM);
 
  //code to show users info and current balance
    $("p#userinfo").append("<span class='userdetailsname'>" + newUser.FullName + "</span>");

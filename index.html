@@ -107,12 +107,14 @@
                   </select>
                   <label for="state-name">Veggies</label>
                   <select required class="form-control pizza-veggies" id="pizza-veggies">
+                    <option></option>
                     <option>Onions</option>
                     <option>Green Peppers</option>
                     <option>Sun-dried Tomatos</option>
                   </select>
                   <label for="state-name">Meat</label>
                   <select required class="form-control pizza-meat" id="pizza-meat">
+                    <option></option>
                     <option>Beef strips</option>
                     <option>Chicken</option>
                     <option>Pork</option>
@@ -127,13 +129,12 @@
             </div>
           </div>
           <div class="col-md">
-            <h2">Cart</h2>
+            <h2>Cart</h2>
               <h2>Price: $ <span id="final-cost"></span></h2>
               <div id="order-details">
-
+              <p id="delivery-cost"> </p>
               </div>
             <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
-            <h3><span id="delivery-option"></span></h3>
         </div>
         </div>
       </div>
