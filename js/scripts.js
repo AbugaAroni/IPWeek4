@@ -126,7 +126,8 @@ $("form#pizza-form").submit(function(event) {
     console.log(totalcost);
 
     $("p#pizza-details").append("Order1" + "<ul><li>" + inputtedPSize + "</li><li>" + inputtedPCrust + "</li>"+ "</li><li>" + inputtedPCheese + "</li>"+ "</li><li>" + inputtedPType + "</li></ul>");
-    $
+    $("p#total-cost").append("Total cost" + "<ul><li>" + totalcost + "ksh" +"</li></ul>");
+
   });
 
   });
