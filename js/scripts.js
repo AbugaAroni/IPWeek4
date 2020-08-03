@@ -79,7 +79,8 @@ $("#delivery").click( function(event) {
 
 });
 
-
+//counter for number of orders
+var numberOrders = 0;
 
 //when inpick up button is clicked, the order pizza div should show and hide the add address form
 $("#pickup").click( function(event) {
@@ -125,8 +126,12 @@ $("form#pizza-form").submit(function(event) {
     console.log(newPizza.totalprice);
     console.log(totalcost);
 
-    $("p#pizza-details").append("Order1" + "<ul><li>" + inputtedPSize + "</li><li>" + inputtedPCrust + "</li>"+ "</li><li>" + inputtedPCheese + "</li>"+ "</li><li>" + inputtedPType + "</li></ul>");
-    $("p#total-cost").append("Total cost" + "<ul><li>" + totalcost + "ksh" +"</li></ul>");
+    numberOrders += 1;
+
+    $("p#pizza-details").append("Order " + numberOrders +"<ul><li>" + inputtedPSize + "</li><li>" + inputtedPCrust + "</li>"+ "</li><li>" + inputtedPCheese + "</li>"+ "</li><li>" + inputtedPType + "</li></ul>");
+    $("p#total-cost").html("Total cost" + "<ul><li>" + totalcost + "ksh" +"</li></ul>");
+    $("button#pizzasubmit").addClass('show-div');
+    $("button#anotherpizza").RemoveClass('show-div');
 
   });
 
