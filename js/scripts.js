@@ -17,13 +17,6 @@ function Pizza (size,crust,cheese,type) {
 }
 
 
-//collect info about custom order
-function CustomP (base,veggies,meat) {
-  this.base = base;
-  this.veggies = veggies;
-  this.meat= meat;
-}
-
 //price
 Pizza.prototype.pizzaCost = function () {
   if (this.size === "Small") {
@@ -118,16 +111,12 @@ $("form#pizza-form").submit(function(event) {
  var inputtedPCrust = $("select#pizza-crust").val();
  var inputtedPCheese = $("select#pizza-cheese").val();
  var inputtedPType = $("select#pizza-type").val();
- var inputtedPCustomB = $("select#pizza-base").val();
- var inputtedPCustomV = $("select#pizza-veggies").val();
- var inputtedPCustomM = $("select#pizza-meat").val();
 
     newPizza = new Pizza(inputtedPSize, inputtedPCrust, inputtedPCheese, inputtedPType);
-    newCPizza = new CustomP(inputtedPCustomB, inputtedPCustomV, inputtedPCustomM);
 
     var pizzaDetails = (inputtedPSize + " - " + inputtedPCrust + ", " + inputtedPCheese + ", " + inputtedPCheese + ", " + inputtedPType + ". ");
     newPizza.pizzaCost();
-   var cost =  newPizza.finalCost();
+    var cost =  newPizza.finalCost();
 
     console.log(pizzaDetails);
     console.log(cost);
