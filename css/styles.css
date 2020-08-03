@@ -21,3 +21,16 @@ img {
   background-color: lightblue;
 
 }
+.pizzapics {
+
+}
+
+
+@media screen and (max-width: 800px) {
+  p {
+    font-size: large;
+  }
+  .pizzapics {
+    display:none;
+  }
+}
