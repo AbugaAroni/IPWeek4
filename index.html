@@ -25,7 +25,7 @@
           <p id="del-message" class="show-div"> You've chosen to have your pizza delivered. Please complete your order below. </p>
           <p id="pick-message" class="show-div"> You've chosen to pick up your pizza in store. Please complete your order below. </p>
         </div>
-        <div id = "addressbox" class="col-md show-div">
+        <div id="addressbox" class="col-md show-div addressbackground">
           <h3>Add your address information</h3>
           <p> *Delivery only available in Nairobi Area </p>
           <form id="address-form">
@@ -64,18 +64,59 @@
           <div class ="col"><h2>Please pick out your pizza</h2></div>
         </div>
         <div class = "row">
-          <div class ="col-md"><h3>Size</h3>
-
-          </div>
-          <div class ="col-md"><h3>Crust</h3>
-
-          </div>
-          <div class ="col-md"><h3>Cheese</h3>
-
-          </div>
-          <div class ="col-md"><h3>Toppings</h3>
-
-          </div>
+          <form id="pizza-form">
+            <div class ="col-md"><h3>Size</h3>
+                <select required class="form-control pizza-size" id="pizza-size">
+                  <option>Small</option>
+                  <option>Medium</option>
+                  <option>Large</option>
+                  <option>Extra-Large</option>
+                </select>
+            </div>
+            <div class ="col-md"><h3>Crust</h3>
+              <select required class="form-control pizza-crust" id="pizza-crust">
+                <option>Crispy</option>
+                <option>Stuffed</option>
+                <option>Glutten-Free</option>
+              </select>
+            </div>
+            <div class ="col-md"><h3>Cheese</h3>
+              <select required class="form-control pizza-cheese" id="pizza-cheese">
+                <option>Normal</option>
+                <option>Extra-cheesy</option>
+                <option>Vegan-cheese</option>
+              </select>
+            </div>
+            <div class ="col-md"><h3>Toppings/Type</h3>
+              <select required class="form-control pizza-type" id="pizza-type">
+                <option>Margherita</option>
+                <option>Pepperoni</option>
+                <option>Hawaiian</option>
+                <option>Mediterranian</option>
+              </select>
+            </div>
+            <div class ="col-md"><h3>Custom toppings</h3>
+              <label for="Pizza Base">Base</label>
+              <select required class="form-control pizza-base" id="pizza-base">
+                <option></option>
+                <option>Tomato</option>
+                <option>Barbeqcue</option>
+              </select>
+              <label for="state-name">Veggies</label>
+              <select required class="form-control pizza-veggies" id="pizza-veggies">
+                <option>Onions</option>
+                <option>Green Peppers</option>
+                <option>Sun-dried Tomatos</option>
+              </select>
+              <label for="state-name">Meat</label>
+              <select required class="form-control pizza-meat" id="pizza-meat">
+                <option>Beef strips</option>
+                <option>Chicken</option>
+                <option>Pork</option>
+                <option>None</option>
+              </select>
+            </div>
+          </form>
         </div>
       </div>
     </div>
