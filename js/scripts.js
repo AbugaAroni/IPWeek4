@@ -1,3 +1,8 @@
+// Business interface logic
+function Account (name,balance) {
+  this.FullName = name;
+  this.InitialBalance = balance;
+}
 
 
 
@@ -29,6 +34,10 @@ $("form#address-form").submit(function(event) {
   $("#addressbox").addClass('show-div');
   $("button#delivery").addClass('show-div');
   $("p#del-message").removeClass('show-div');
+
+
 });
+
+
 
 });
