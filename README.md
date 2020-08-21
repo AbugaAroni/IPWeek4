@@ -7,7 +7,7 @@ This is a web application for a pizza ordering website.
 
 ### Features
 You can order pizza.
-You can order as many different Pizzas as you would like.
+You can order as many different Pizzas as you would like.g
 
 ### Limitations
 Cannot change order once set.
